@@ -1,6 +1,13 @@
 #pragma once
-class Div
+#include "BinaryExpression.h"
+class Div : public BinaryExpression
 {
 public:
-private:
+    Div(Expression *const left, Expression *const right) : BinaryExpression(left, right)
+    {
+    }
+    double calculate()
+    {
+        return (getL()->calculate() / getR()->calculate());
+    }
 };

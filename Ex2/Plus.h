@@ -1,6 +1,14 @@
 #pragma once
-class Plus
+#include"BinaryExpression.h"
+class Plus : public BinaryExpression
 {
 public:
-private:
+    Plus(Expression* const left, Expression* const right) : BinaryExpression(left,right)
+    {
+
+    }
+    double calculate()
+    {
+            return(getL()->calculate()+getR()->calculate());
+    }
 };

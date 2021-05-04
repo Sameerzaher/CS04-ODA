@@ -1,6 +1,13 @@
 #pragma once
-class Mul
+#include "BinaryExpression.h"
+class Mul : public BinaryExpression
 {
 public:
-private:
+    Mul(Expression *const left, Expression *const right) : BinaryExpression(left, right)
+    {
+    }
+    double calculate()
+    {
+        return (getL()->calculate() * getR()->calculate());
+    }
 };

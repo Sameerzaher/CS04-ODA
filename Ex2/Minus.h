@@ -1,6 +1,13 @@
 #pragma once
-class Minus
+#include "BinaryExpression.h"
+class Minus : public BinaryExpression
 {
 public:
-private:
+    Minus(Expression *const left, Expression *const right) : BinaryExpression(left, right)
+    {
+    }
+    double calculate()
+    {
+        return (getL()->calculate() - getR()->calculate());
+    }
 };
