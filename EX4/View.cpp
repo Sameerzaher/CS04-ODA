@@ -5,25 +5,21 @@ int ViewConsoleBoardGame::draw(int num)
 	switch (num)
 	{
 	case 1:
-		system("cls");
-		cout << "Choose one option:\n\t1.Tic Tac Toe\n\t3.Exit" << endl;
+		cout << "Choose one option:\n\t1.Tic Tac Toe\n\t2.Exit" << endl;
 		break;
 	case 2:
-		system("cls");
 		cout << "Choose option:\n\t1.low level\n\t2.hight level\n\t3.Exit" << endl;
 		break;
 	case 3:
-		system("cls");
 		cout << "Choose option : \n\t1.low level\n\t2.hight level\n\t3.Exit" << endl;
 		break;
 	case 4:
-		cout << "Choose one option:\n\t1.Play Again\n\t2.Exite" << endl;
+		cout << "Choose one option:\n\t1.Play Again\n\t2.Exit" << endl;
 		break;
 	case 5:
 		cout << "Choose correct option" << endl;
 		break;
 	case 6:
-		system("cls");
 		cout << "how many moves you allow for this game? ";
 		break;
 	}
@@ -36,7 +32,6 @@ int ViewConsoleBoardGame::draw(int num)
 int ViewBoardGame::drawBoard(vector<vector<char> > board, GameState state)
 {
 	_boardView = board;
-	system("cls");
 	int size = board.size();
 	string s;
 	if (size == 3)
